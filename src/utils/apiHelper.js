@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { toast } from 'react-toastify';
 
 
 const BASE_URL = 'http://localhost:8000' ;
@@ -45,12 +46,12 @@ const apiHelper = async (endpoint, method = 'GET', body = null, additionalHeader
 
   } catch (error) {
     // Handle and log errors
-    console.error('API Request failed:', error?.response?.data?.error || error.message);
+    toast.error('API Request failed:', error?.response?.data?.error || error.message);
     
     if (error?.response) {
-      console.error(error?.response?.data?.error || "An error occurred."); 
+      toast.error(error?.response?.data?.error || "An error occurred."); 
     } else {
-      console.error(`Network error! ${error.message}`); 
+      toast.error(`Network error! ${error.message}`); 
     }
     
     throw error; 

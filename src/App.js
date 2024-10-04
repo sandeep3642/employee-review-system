@@ -18,8 +18,6 @@ function App() {
         <Route path="/addEmployee" element={<AddEmployee />} />
         <Route path="/editEmployee/:id" element={<EditEmployee />} />{" "}
         <Route path="/ViewEmployee/:id" element={<ViewEmployee />} />{" "}
-
-
       </Routes>
     </Router>
   </div> 

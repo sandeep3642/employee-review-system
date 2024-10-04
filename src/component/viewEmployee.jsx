@@ -168,7 +168,7 @@ const ViewEmployee = () => {
             </tbody>
           </table>
         ) : (
-          <p>No feedback available for this employee.</p>
+          <p className="text-gray-800">No feedback available for this employee.</p>
         )}
       </div>
     </div>
